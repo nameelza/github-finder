@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 function Navbar({ title }) {
   return (
-    <div>
+    <nav className="navbar mb-12 shadow-lg bg-neutral text-neutral-content">
       <h1>Github Finder</h1>
-    </div>
+    </nav>
   );
 }
 
