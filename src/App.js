@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="flex flex-col justify-between h-screen">
       <Navbar />
-      <main>Content</main>
+      <main className="container mx-auto px-3">Content</main>
       <Footer/>
     </div>
   );
