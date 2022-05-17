@@ -13,7 +13,7 @@ function Notfound() {
             404 - Page not found
           </p>
           <Link to="/" className="btn btn-primary btn-lg">
-            <FaHome className="mr-2"/>
+            <FaHome className="mr-2" />
             Back To Home
           </Link>
         </div>
