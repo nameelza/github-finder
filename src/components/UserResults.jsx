@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 function UserResults() {
   const [users, setUsers] = useState([]);
-  
+
   useEffect(() => {
     fetchUsers();
   }, []);
@@ -13,8 +13,10 @@ function UserResults() {
         Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
       },
     });
+
     const data = await response.json();
-    console.log(data);
+
+    setUsers(data);
   };
 
   return (
