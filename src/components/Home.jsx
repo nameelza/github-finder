@@ -1,8 +1,10 @@
+import UserResults from './UserResults';
+
 function Home() {
   return (
-    <div>
-      <h1 className="text-primary-content text-6xl">Welcome</h1>
-    </div>
+    <>
+      <UserResults />
+    </>
   );
 }
 
