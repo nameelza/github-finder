@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 
 function UserResults() {
+  const [users, setUsers] = useState([]);
+  
   useEffect(() => {
     fetchUsers();
   }, []);
