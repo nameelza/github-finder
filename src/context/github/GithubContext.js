@@ -12,8 +12,10 @@ export const GithubProvider = ({ children }) => {
     loading: false,
   });
 
+  // Get initial users (testing purposes)
   const fetchUsers = async () => {
     setLoading();
+
     const response = await fetch(`${GITHUB_URL}/users`, {
       headers: {
         Authorization: `token ${GITHUB_TOKEN}`,
