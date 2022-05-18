@@ -9,7 +9,7 @@ const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
 export const GithubProvider = ({ children }) => {
   const [state, dispatch] = useReducer(githubReducer, {
     users: [],
-    loading: true,
+    loading: false,
   });
 
   const fetchUsers = async () => {
