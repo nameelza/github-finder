@@ -7,7 +7,7 @@ function UserResults() {
 
   useEffect(() => {
     fetchUsers();
-  });
+  }, [fetchUsers]);
 
   return loading ? (
     <h1>Loading...</h1>
