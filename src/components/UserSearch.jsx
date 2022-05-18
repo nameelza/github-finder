@@ -10,6 +10,10 @@ function UserSearch() {
                 className="w-full pr-40 bg-gray-200 input input-lg text-black"
                 placeholder="Search"
               />
+              <button
+                type="submit"
+                className="absolute right-0 top-0 rounded-l-none w-36 btn btn-lg"
+              >Go</button>
             </div>
           </div>
         </form>
