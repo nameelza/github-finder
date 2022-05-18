@@ -7,7 +7,8 @@ function UserResults() {
 
   useEffect(() => {
     fetchUsers();
-  }, [fetchUsers]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- needed to prevent infinite loop
+  }, []); 
 
   return loading ? (
     <h1>Loading...</h1>
