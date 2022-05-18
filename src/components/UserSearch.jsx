@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 function UserSearch() {
+  const [text, setText] = useState("");
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setText(e.target.value);
+  }
   return (
     <div className="grid grid-cols-1 xl:grid-xols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 gap-8">
       <div>
@@ -9,6 +17,8 @@ function UserSearch() {
                 type="text"
                 className="w-full pr-40 bg-gray-200 input input-lg text-black"
                 placeholder="Search"
+                value={text}
+                onChange={handleChange}
               />
               <button
                 type="submit"
