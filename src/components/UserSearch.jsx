@@ -1,17 +1,24 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import GithubContext from "../context/github/GithubContext";
 
 function UserSearch() {
   const [text, setText] = useState("");
 
+  const { users } = useContext(GithubContext);
+
   const handleChange = (e) => {
     setText(e.target.value);
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Search for users
-    setText("");
-  }
+    if (text === "") {
+      alert("Please enter a username");
+    } else {
+      // TODO: Search for users
+      setText("");
+    }
+  };
 
   return (
     <div className="grid grid-cols-1 xl:grid-xols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 gap-8">
@@ -29,14 +36,18 @@ function UserSearch() {
               <button
                 type="submit"
                 className="absolute right-0 top-0 rounded-l-none w-36 btn btn-lg"
-              >Go</button>
+              >
+                Go
+              </button>
             </div>
           </div>
         </form>
       </div>
-      <div>
-        <button className="btn btn-ghost btn-lg">Clear</button>
-      </div>
+      {users.length > 0 && (
+        <div>
+          <button className="btn btn-ghost btn-lg">Clear</button>
+        </div>
+      )}
     </div>
   );
 }
