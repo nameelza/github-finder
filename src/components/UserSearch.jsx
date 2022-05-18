@@ -4,13 +4,19 @@ function UserSearch() {
   const [text, setText] = useState("");
 
   const handleChange = (e) => {
-    e.preventDefault();
     setText(e.target.value);
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // TODO: Search for users
+    setText("");
+  }
+
   return (
     <div className="grid grid-cols-1 xl:grid-xols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 gap-8">
       <div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-control">
             <div className="relative">
               <input
