@@ -28,7 +28,7 @@ function UserResults() {
       ))}
     </div>
   ) : (
-    <p>Loading...</p>
+    <h1>Loading...</h1>
   );
 }
 
