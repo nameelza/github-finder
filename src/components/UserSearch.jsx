@@ -15,7 +15,6 @@ function UserSearch() {
     if (text === "") {
       alert("Please enter a username");
     } else {
-      // TODO: Search for users
       searchUsers(text);
       setText("");
     }
