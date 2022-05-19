@@ -11,15 +11,15 @@ export const AlertProvider = ({ children }) => {
       type: "SET_ALERT",
       payload: { text, type },
     });
+
+    setTimeout(() => dispatch({ type: "CLEAR_ALERT" }), 3000);
   };
 
   return (
-    <AlertContext.Provider
-      value={{setAlert}}
-    >
+    <AlertContext.Provider value={{ setAlert }}>
       {children}
     </AlertContext.Provider>
-  )
+  );
 };
 
 export default AlertContext;
