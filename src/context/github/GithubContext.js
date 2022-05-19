@@ -9,6 +9,7 @@ const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
 export const GithubProvider = ({ children }) => {
   const [state, dispatch] = useReducer(githubReducer, {
     users: [],
+    noUsers: false,
     loading: false,
   });
 
@@ -49,6 +50,7 @@ export const GithubProvider = ({ children }) => {
     <GithubContext.Provider
       value={{
         users: state.users,
+        noUsers: state.noUsers,
         loading: state.loading,
         searchUsers,
         clearUsers,
