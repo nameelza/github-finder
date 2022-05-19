@@ -19,8 +19,6 @@ export const GithubProvider = ({ children }) => {
       q: text,
     });
 
-    console.log(params)
-
     const response = await fetch(`${GITHUB_URL}/search/users?${params}`, {
       headers: {
         Authorization: `token ${GITHUB_TOKEN}`,
@@ -40,6 +38,12 @@ export const GithubProvider = ({ children }) => {
       type: "SET_LOADING",
     });
   };
+
+  const clearUsers = () => {
+    dispatch({
+      type: "CLEAR_USERS",
+    });
+  }
 
   return (
     <GithubContext.Provider
