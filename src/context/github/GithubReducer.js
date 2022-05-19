@@ -15,7 +15,7 @@ const githubReducer = (state, action) => {
       return {
         ...state,
         users: [],
-      }
+      };
     default:
       return state;
   }
