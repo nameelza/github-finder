@@ -5,5 +5,11 @@ const AlertContext = createContext();
 
 const AlertProvider = ({ children }) => {
   const [state, dispatch] = useReducer(alertReducer, null);
-  
+
+  const setAlert = (text, type) => {
+    dispatch({
+      type: "SET_ALERT",
+      payload: { text, type },
+    });
+  };
 };
