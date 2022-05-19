@@ -6,7 +6,7 @@ function UserSearch() {
   const [text, setText] = useState("");
 
   const { users, searchUsers, clearUsers } = useContext(GithubContext);
-  const { alert, setAlert } = useContext(AlertContext);
+  const { setAlert } = useContext(AlertContext);
 
   const handleChange = (e) => {
     setText(e.target.value);
@@ -15,7 +15,7 @@ function UserSearch() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (text === "") {
-      // alert
+      setAlert("Please enter something", "error");
     } else {
       searchUsers(text);
       setText("");
