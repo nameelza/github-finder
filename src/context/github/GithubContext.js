@@ -39,7 +39,6 @@ export const GithubProvider = ({ children }) => {
   // Get single user
   const getUser = async (login) => {
     setLoading();
-    console.log("login", login);
 
     const response = await fetch(`${GITHUB_URL}/users/${login}`, {
       headers: {
@@ -51,7 +50,6 @@ export const GithubProvider = ({ children }) => {
       window.location = "/notfound";
     } else {
       const { data } = await response.json();
-      console.log("data", data)
 
       dispatch({
         type: "GET_USER",
