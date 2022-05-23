@@ -63,8 +63,24 @@ function User() {
               </h1>
               <p className="text-white">{bio}</p>
               <div className="mt-4 card-actions">
-                  <a href={html_url} target="_blank" rel="noreferrer" className="btn btn-outline">Visit Github Profile</a>
+                <a
+                  href={html_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-outline"
+                >
+                  Visit Github Profile
+                </a>
               </div>
+            </div>
+
+            <div className="w-full rounded-lg shadow-md bg-base-100 stats">
+              {location && (
+                <div className="state">
+                  <div className="stat-title text-md">Location</div>
+                  <div className="text-lg stat-value">{location}</div>
+                </div>
+              )}
             </div>
           </div>
         </div>
