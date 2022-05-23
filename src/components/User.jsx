@@ -29,7 +29,15 @@ function User() {
     hireable,
   } = user;
 
-  return loading ? <h1>Loading...</h1> : <div>{user.login}</div>;
+  return loading ? (
+    <h1>Loading...</h1>
+  ) : (
+    <div className="w-full mx-auto lg:w-10/12">
+      <div className="mb-4">
+        <Link to="/" className="btn btn-ghost">Back To Search</Link>
+      </div>
+    </div>
+  );
 }
 
 export default User;
