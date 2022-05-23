@@ -101,7 +101,7 @@ function User() {
                 <div className="stat">
                   <div className="stat-title text-md">Twitter</div>
                   <div className="text-lg text-white stat-value">
-                  <a
+                    <a
                       href={`https://twitter.com/${twitter_username}`}
                       target="_blank"
                       rel="noreferrer"
@@ -111,6 +111,28 @@ function User() {
                   </div>
                 </div>
               )}
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full py-5 mb-6 rounded-lg shadow-md bg-base-100 stats">
+          <div className="stat">
+            <div className="stat-figure text-secondary">
+              <FaUsers className="text-3xl md:text-5xl" />
+            </div>
+            <div className="stat-title pr-5">Followers</div>
+            <div className="stat-value pr-5 text-3xl text-white md:text-4xl">
+              {followers}
+            </div>
+          </div>
+
+          <div className="stat">
+            <div className="stat-figure text-secondary">
+              <FaUserFriends className="text-3xl md:text-5xl" />
+            </div>
+            <div className="stat-title pr-5">Following</div>
+            <div className="stat-value pr-5 text-3xl text-white md:text-4xl">
+              {following}
             </div>
           </div>
         </div>
