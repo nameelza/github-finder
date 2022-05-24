@@ -1,5 +1,5 @@
 function RepoItem({ repo }) {
-  return <div>{repo.id}</div>;
+  return <div>{repo.name}</div>;
 }
 
 export default RepoItem;
