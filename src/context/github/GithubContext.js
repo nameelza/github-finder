@@ -104,6 +104,7 @@ export const GithubProvider = ({ children }) => {
         searchUsers,
         clearUsers,
         getUser,
+        getRepos,
       }}
     >
       {children}
