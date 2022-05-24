@@ -1,7 +1,11 @@
-function RepoList() {
+import RepoItem from "./RepoItem";
+
+function RepoList({ repos }) {
   return (
     <div>
-      <p>RepoList</p>
+      {repos.map((repo) => (
+        <RepoItem key={repo.id} repo={repo}/>
+      ))}
     </div>
   );
 }
