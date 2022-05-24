@@ -10,6 +10,7 @@ export const GithubProvider = ({ children }) => {
   const [state, dispatch] = useReducer(githubReducer, {
     users: [],
     user: {},
+    repos: [],
     noUsers: false,
     loading: false,
   });
@@ -77,6 +78,7 @@ export const GithubProvider = ({ children }) => {
         user: state.user,
         noUsers: state.noUsers,
         loading: state.loading,
+        repos: state.repos,
         searchUsers,
         clearUsers,
         getUser,
