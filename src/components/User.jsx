@@ -3,6 +3,7 @@ import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import GithubContext from "../context/github/GithubContext";
+import RepoList from "./RepoList";
 
 function User() {
   const { getUser, user, loading } = useContext(GithubContext);
@@ -155,9 +156,9 @@ function User() {
               {public_gists}
             </div>
           </div>
-
         </div>
       </div>
+      <RepoList />
     </>
   );
 }
