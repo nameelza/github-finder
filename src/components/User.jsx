@@ -9,10 +9,16 @@ import { getUser, getRepos } from "../context/github/GithubActions";
 function User() {
   const { user, loading, repos, dispatch } = useContext(GithubContext);
   const params = useParams();
-  useEffect(() => {
-    const getUserData = async () => {
 
-    }
+  useEffect(() => {
+    dispatch({ type: "SET_LOADING" });
+    const getUserData = async () => {
+      const user = await getUser(params.login);
+      dispatch({
+        type: "GET_USER",
+        payload: user,
+      });
+    };
     getUserData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
