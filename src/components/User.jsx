@@ -7,11 +7,13 @@ import RepoList from "./RepoList";
 import { getUser, getRepos } from "../context/github/GithubActions";
 
 function User() {
-  const { user, loading, repos } = useContext(GithubContext);
+  const { user, loading, repos, dispatch } = useContext(GithubContext);
   const params = useParams();
   useEffect(() => {
-    getUser(params.login);
-    getRepos(params.login);
+    const getUserData = async () => {
+
+    }
+    getUserData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
