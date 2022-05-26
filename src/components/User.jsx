@@ -19,7 +19,6 @@ function User() {
         type: "GET_USER_AND_REPOS",
         payload: userData,
       });
-      
     };
     getUserData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
