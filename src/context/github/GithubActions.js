@@ -22,7 +22,7 @@ export const getUserAndRepos = async (login) => {
     github.get(`/users/${login}/repos`)
   );
 
-  return { user: user.data, repos: repos.data };
+  return { user: user.data, repos: repos.datas };
 };
 
 // export const getUser = async (login) => {
