@@ -17,12 +17,15 @@ export const searchUsers = async (text) => {
 };
 
 export const getUserAndRepos = async (login) => {
-  const [user, repos] = Promise.all(
+ const res = await Promise.all([
     github.get(`/users/${login}`),
-    github.get(`/users/${login}/repos`)
-  );
+    github.get(`/users/${login}/repos`),
+  ]);
+  console.log('res',res)
 
-  return { user: user.data, repos: repos.datas };
+//   console.log(user.data, repos.data);
+
+  return undefined;
 };
 
 // export const getUser = async (login) => {
