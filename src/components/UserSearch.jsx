@@ -15,15 +15,13 @@ function UserSearch() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (text === "") {
       setAlert("Please enter something", "error");
     } else {
       dispatch({ type: "SET_LOADING" });
       const users = await searchUsers(text);
-      dispatch({
-        type: "GET_USERS",
-        payload: users,
-      });
+      dispatch({ type: "GET_USERS", payload: users });
 
       setText("");
     }
